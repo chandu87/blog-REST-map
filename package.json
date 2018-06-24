@@ -1,0 +1,25 @@
+{
+  "name": "blog-rest-map",
+  "version": "1.0.0",
+  "description": "Blog with mapping using REST",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandu87/blog-REST-map.git"
+  },
+  "author": "chandu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chandu87/blog-REST-map/issues"
+  },
+  "homepage": "https://github.com/chandu87/blog-REST-map#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.6"
+  }
+}
