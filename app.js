@@ -18,7 +18,7 @@ const blogSchema = new mongoose.Schema({
 });
 
 let Blog = mongoose.model("Blog", blogSchema);
-    
+
 // Blog.create({
 //     name: "Roasted MIX",
 //     image: "https://images.unsplash.com/photo-1529381301888-8856b2080591?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4f0c326b2d490bd5d9eebb4b970f731f&auto=format&fit=crop&w=3144&q=80",
@@ -27,6 +27,8 @@ let Blog = mongoose.model("Blog", blogSchema);
 // });
 
 //RESTFUL ROUTES
+
+//INDEX ROUTE
 app.get("/", function(req, res) {
   res.redirect("/blogs");
 });
@@ -35,9 +37,25 @@ app.get("/blogs", function(req, res) {
     if (err) {
       console.log("There is Some error in Finding blogs data", err);
     } else {
-      res.render("blogs.ejs",{blogs : data});
+      res.render("blogs",{blogs : data});
     }
   });
+});
+
+//NEW ROUTE
+app.get("/blogs/new", function(req, res){
+    res.render("new");
+});
+
+//CREATE ROUTE
+app.post("/blogs", function(req, res){
+        Blog.create(req.body.blog, function(err, data){
+            if(err){
+                res.render("new");
+            }else{
+                res.redirect("/blogs");
+            }
+        });
 });
 
 app.listen(3000, function() {
