@@ -18,7 +18,7 @@ const blogSchema = new mongoose.Schema({
 });
 
 let Blog = mongoose.model("Blog", blogSchema);
-
+    
 // Blog.create({
 //     name: "Roasted MIX",
 //     image: "https://images.unsplash.com/photo-1529381301888-8856b2080591?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4f0c326b2d490bd5d9eebb4b970f731f&auto=format&fit=crop&w=3144&q=80",
