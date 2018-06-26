@@ -92,6 +92,19 @@ app.put("/blogs/:id", function(req, res){
     });
 });
 
+//DELETE ROUTE
+app.delete("/blogs/:id", function(req, res){
+    Blog.findByIdAndRemove(req.params.id, function(err, resRemove){
+        if(err){
+            res.redirect("/blogs/"+ req.params.id);
+        }
+        else{
+            res.redirect("/blogs");
+        }
+    });
+
+});
+
 app.listen(3000, function() {
   console.log("Server Started : 3000");
 });
