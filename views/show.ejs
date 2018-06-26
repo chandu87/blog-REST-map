@@ -2,7 +2,7 @@
 
 <div class="ui main text container">
     <div class="ui huge header">
-            <%=blogData.name%>
+            <%=blogData.title%>
     </div>
     <div class="ui top attached segment">
         <div class="item">
@@ -13,9 +13,9 @@
             <div class="description">
                 <p><%=blogData.body%></p>
             </div>
+            <a href="/blogs/<%=blogData._id%>/edit" class="button">Edit</a>
         </div>
     </div>
-
 </div>
 
 <%include ./partials/footer%>
