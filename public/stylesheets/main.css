@@ -4,9 +4,9 @@ i.icon{
 .main.container{
     margin-top: 7em;
 }
-img{
+/* img{
     width: 200px;
-}
+} */
 #delete{
     display: inline;
 }
